@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/tileset1.tres" type="TileSet" id=1]
+[ext_resource path="res://Level.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=3]
+
+[node name="Level" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 8, 0, 65536, 8, 0, 65551, 8, 0, 131072, 8, 0, 131087, 8, 0, 196608, 8, 0, 196623, 8, 0, 262144, 8, 0, 262159, 8, 0, 327680, 8, 0, 327695, 8, 0, 393216, 8, 0, 393231, 8, 0, 524286, 8, 0, 524287, 8, 0, 458752, 8, 0, 458767, 8, 0, 458768, 8, 0, 458769, 8, 0, 589822, 8, 0, 524305, 8, 0, 655358, 8, 0, 655359, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0, 589837, 8, 0, 589838, 8, 0, 589839, 8, 0, 589840, 8, 0, 589841, 8, 0 )
+script = ExtResource( 2 )
+level_id = 2
+spawn_position = Vector2( 256, 256 )
+
+[node name="Door" parent="." instance=ExtResource( 3 )]
+position = Vector2( -32, 272 )
+destination_level = 1
+destination_position = Vector2( 543, 256 )
+
+[node name="Door2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 544, 272 )
+rotation = 3.14159
+destination_level = 3
+destination_position = Vector2( -31, 256 )

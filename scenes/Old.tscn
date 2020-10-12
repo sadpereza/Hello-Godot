@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Camera2D.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Level0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+
+[node name="Old" type="Node"]
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 200, 528 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 1024
+limit_bottom = 640
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_top = 0.35
+drag_margin_bottom = 0.35
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource( 1 )
